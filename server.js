@@ -1,6 +1,9 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
+const contactRoutes = require('./routes/contactRoutes');
+
+app.use('/api/contact', contactRoutes);
 
 dotenv.config();
 connectDB();
